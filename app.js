@@ -10,17 +10,13 @@ const express = require('express'), // creates an express object so we can acces
 // effects all routes of the server
 app.use(morgan('dev')); // makes program log to the console the data from a request on the server
 app.use(express.json()); // a bodyParser middleware; recoginizes incoming data as JSON
-// app.use(express.static(__dirname + '/public')); // needed to serve static files to all routes
 
 connectDB(); // calls fuction that sets up the DB connection
 
 //* ############### Route Handling ###############
-const homeRouter = require('./routes/homeRouter'), // route handling for root route
-    testRouter = require('./routes/testRouter');
+const homeRouter = require('./routes/homeRouter'); // route handling for root route
 
 app.use('/', homeRouter); // tells server to run homeRouter middleware when a request is made to the root route
-
-app.use('/test', testRouter);
 
 app.listen(port, () => { // runs callback on program start; connects to the specified port number
 
