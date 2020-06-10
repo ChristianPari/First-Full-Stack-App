@@ -1,0 +1,23 @@
+{
+    "name": "first-full-stack-app",
+    "version": "1.0.0",
+    "description": "My first attempt at making a simple Full Stack application using JS, Node, Express, MongoDB, HTML, and CSS",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js",
+        "dS": "nodemon app.js"
+    },
+    "keywords": [],
+    "author": "Christian Pari",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.17.1",
+        "mongoose": "^5.9.18",
+        "validator": "^13.0.0"
+    },
+    "devDependencies": {
+        "dotenv": "^8.2.0",
+        "morgan": "^1.10.0",
+        "nodemon": "^2.0.4"
+    }
+}
