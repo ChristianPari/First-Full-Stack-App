@@ -14,9 +14,11 @@ app.use(express.json()); // a bodyParser middleware; recoginizes incoming data a
 connectDB(); // calls fuction that sets up the DB connection
 
 //* ############### Route Handling ###############
-const homeRouter = require('./routes/homeRouter'); // route handling for root route
+const homeRouter = require('./routes/homeRouter'), // route handling for root route
+    qbsRouter = require('./routes/qbsRouter'); // route handling for quarterbacks route
 
 app.use('/', homeRouter); // tells server to run homeRouter middleware when a request is made to the root route
+app.use('/qbs', qbsRouter);
 
 app.listen(port, () => { // runs callback on program start; connects to the specified port number
 
