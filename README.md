@@ -1,6 +1,10 @@
 #First Full Stack Application
 My goal for this program is for me to finally connect the front-end to the back-end and begin creating my own Full Stack Apps, but first I must get as best of an understanding I can of the process and setup of it all. This will be a simple program but it will set the foundation for my Full Stack learning and creation.
 
+<h2>June 11, 2020</h2>
+<h3>5:30pm - 8:30pm</h3>
+Added another GET request to the qbs route to get an indiviudal QBs statistics. Also started creating the frontend of this applications home page which I want to have a clickable navigation bar that will display positions and a user can click on one and it will create a display below so the user can (either scroll or click through pages) to view each players statistics for that position. So far, I've created the heading for the homepage, the nav bar that for now only has a Quarterbacks tab and as I add positions I will add them to the nav bar. Then once the Quarterbacks tab is clicked a div is created below with the data from the collection of QBs in my Database and display them nicely with name, win loss record, passing yards and touchdowns, and current/previous teams.
+
 <h2>June 10, 2020</h2>
 <h3>5:30pm - 7:30pm</h3>
 Finally figured out what kind of project I wanted to create, this is going to be a NFL refernece application, depending how much I add to this but the first process I will be attempting to create is the Quarterbacks portion. So to this I started by making the Schema Model for the QBs which has the properties: name, passing yards, passing touchdowns, win loss record, teams, and jersey numbers. After, I went and created the method requests for the 'qbs' route of my API.<br>
