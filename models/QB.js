@@ -40,14 +40,6 @@ const validator = require('validator'),
                 type: [String],
                 trim: true
             }
-        },
-        jerseys: {
-            cur_jersey: {
-                type: Number
-            },
-            prev_jerseys: {
-                type: [Number]
-            }
         }
 
     });

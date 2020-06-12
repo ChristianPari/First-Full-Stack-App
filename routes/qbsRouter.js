@@ -1,8 +1,6 @@
 const express = require('express'),
     router = express.Router(),
-    QB = require('../models/QB');
-
-// add static files when needed
+    QB = require('../models/QB'); // mongoDB collection accessible via variable
 
 router.get('/', (req, res) => { // GET all QBs
 
@@ -12,8 +10,35 @@ router.get('/', (req, res) => { // GET all QBs
             return res.status(200).json({
 
                 status: 200,
-                message: 'All QBs in Database',
+                message: 'Quarterbacks',
                 players: allQBs
+
+            });
+
+        })
+        .catch(err => {
+
+            return res.status(500).json({
+
+                status: 500,
+                message: err.message
+
+            });
+
+        });
+
+});
+
+router.get('/:id', (req, res) => { // GETs a single QB from the DB
+
+    QB.findById(req.params.id)
+        .then(qbDoc => {
+
+            return res.status(200).json({
+
+                status: 200,
+                message: `Grabbed QB '${qbDoc.name.first} ${qbDoc.name.last}' from Database`,
+                qb_data: qbDoc
 
             });
 
