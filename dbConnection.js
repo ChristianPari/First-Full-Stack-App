@@ -19,10 +19,13 @@ function dbConnection() {
         } else {
 
             console.log(
+
                 spacer('Connection Established to Database') +
                 '\nConnection Established to Database\n' +
                 spacer('Connection Established to Database') +
-                '\n');
+                '\n'
+
+            );
 
         }
 
@@ -31,20 +34,26 @@ function dbConnection() {
     mongoose.connection.on('error', err => { // runs on error during the attempt to connect
 
         console.log(
+
             spacer('An error occured when trying to connect to MongoDB:') +
             `\nAn error occured when trying to connect to MongoDB:\n${err}\n` +
             spacer('An error occured when trying to connect to MongoDB:') +
-            '\n');
+            '\n'
+
+        );
 
     });
 
     mongoose.connection.on('connected', () => { // runs while the server is connecting to the DB
 
         console.log(
+
             spacer('Connecting') +
             '\nConnecting\n' +
             spacer('Connecting') +
-            `\nURI: ${mongoURI}\n`);
+            `\nURI: ${mongoURI}\n`
+
+        );
 
 
     });

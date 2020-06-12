@@ -23,9 +23,12 @@ app.use('/qbs', qbsRouter);
 app.listen(port, () => { // runs callback on program start; connects to the specified port number
 
     console.log(
+
         spacer(`Listening on port: ${port}`) +
         `\nListening on port: ${port}\n` +
         spacer(`Listening on port: ${port}`) +
-        '\n')
+        '\n'
+
+    );
 
 });
