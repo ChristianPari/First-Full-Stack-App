@@ -1,6 +1,6 @@
 function getDB(reqParam) { // Retrieves all specific position players
 
-    fetch(`${window.location}${reqParam}`, {
+    fetch(`${window.location}${reqParam}/all`, {
             method: 'GET'
         })
         .then((res) => {

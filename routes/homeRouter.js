@@ -6,7 +6,7 @@ router.use(express.static(process.cwd() + '/public/homeStatic/'));
 
 router.get('/', (req, res) => {
 
-    res.sendFile('index.html');
+    res.sendFile(process.cwd() + '/homeStatic/index.html');
 
 });
 
