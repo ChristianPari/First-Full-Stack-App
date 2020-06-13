@@ -1,5 +1,4 @@
-const validator = require('validator'),
-    mongoose = require('mongoose'),
+const mongoose = require('mongoose'),
     QB_Schema = mongoose.Schema({
         name: {
             first: {
@@ -17,7 +16,7 @@ const validator = require('validator'),
             type: Number,
             required: true
         },
-        passing_tds: {
+        touchdowns: {
             type: Number,
             required: true
         },

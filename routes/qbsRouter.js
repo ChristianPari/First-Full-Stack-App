@@ -2,7 +2,28 @@ const express = require('express'),
     router = express.Router(),
     QB = require('../models/QB'); // mongoDB collection accessible via variable
 
-router.get('/', (req, res) => { // GET all QBs
+router.use(express.static(process.cwd() + '/public/qbsStatic/'));
+
+router.get('/', (req, res) => {
+
+    try {
+
+        res.sendFile(process.cwd() + '/public/qbsStatic/qbs.html');
+
+    } catch (err) {
+
+        res.status(500).json({
+
+            status: 500,
+            message: err.message
+
+        });
+
+    };
+
+});
+
+router.get('/all', (req, res) => { // GET all QBs
 
     QB.find({})
         .then(allQBs => {
