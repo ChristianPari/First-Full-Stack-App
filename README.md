@@ -1,4 +1,5 @@
-# First <small><small><small><small><small>SIMPLE</small></small></small></small></small> Full Stack Application
+# First Full Stack Application
+<small>`THIS IS A SIMPLE APP, CREATED TO LEARN HOW TO CONNECT FRONT AND BACKEND TOGETHER`</small><br>
 My goal for this program is for me to finally connect the front-end to the back-end and begin creating my own Full Stack Apps, but first I must get as best of an understanding I can of the process and setup of it all. This will be a simple program but it will set the foundation for my Full Stack learning and creation.
 
 ## Project Updates
