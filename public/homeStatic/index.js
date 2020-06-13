@@ -23,9 +23,14 @@ function createHomePage() {
 
     });
 
+    const displayDiv = createDiv({ id: 'displayDiv' }),
+        initialHead = createHeading({ id: 'initialHead', text: 'Click a Position to Display Player Statistics for that Position!' });
+
     body.appendChild(homeHead);
     body.appendChild(navBarDiv);
     navBarDiv.appendChild(navBarUL);
+    body.appendChild(displayDiv);
+    displayDiv.appendChild(initialHead);
 
 };
 
@@ -33,10 +38,7 @@ function tabClick() { getDB(this.id); };
 
 function displayPosition(data) {
 
-    if (document.getElementById('displayDiv')) { document.getElementById('displayDiv').remove(); }
-
-    const displayDiv = createDiv({ id: 'displayDiv' });
-    body.appendChild(displayDiv);
+    if (document.getElementById('displayDiv')) { document.getElementById('displayDiv').innerHTML = ''; }
 
     switch (data.message) {
 
