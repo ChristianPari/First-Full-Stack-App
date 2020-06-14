@@ -3,6 +3,12 @@
 My goal for this program is for me to finally connect the front-end to the back-end and begin creating my own Full Stack Apps, but first I must get as best of an understanding I can of the process and setup of it all. This will be a simple program but it will set the foundation for my Full Stack learning and creation.
 
 ## Project Updates
+<h3>June 14, 2020</h3>
+<h4>2:30pm - 4:30pm</h4>
+Created the hbs page route and static files, completed the GET request that displays the player data to the page and then also created the search bar for this page like the qbs page, allows the user to search by player name.<br>
+Also began creating a route that allows the user to go to an indvidual players page that (in reality) would display more information on the player than what the other screens displayed. Currently, it just displays the same data from the previous pages as HTML heading elements. Going to create PATCH, and DELETE requests for the player page so that they can be modified; although this feature wouldn't actually be in the 'real world' version, I just want to create the features so that I get more practice with the processes of going about using fetch.<br>
+Next I created links on all the different pages that can take you to specific player pages and back to the home page or back to that positions home page; this allows for a smooth user experience to switch between pages.
+
 <h3>June 13, 2020</h3>
 <h4>4:30pm - 6:30pm</h4>
 Began creating the DOM for the qbs route; created a heading, a search bar that allows the user to search through players by name, a display div below that displays all the qbs in the database (only have 3 docuements in my quarterbacks collection but once I add more I'll implement a clickable page like system or a scrollable div but not the page). Created the API request to get the players from the database and display them to the DOM in the players div.<br>
