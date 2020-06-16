@@ -3,6 +3,10 @@
 My goal for this program is for me to finally connect the front-end to the back-end and begin creating my own Full Stack Apps, but first I must get as best of an understanding I can of the process and setup of it all. This will be a simple program but it will set the foundation for my Full Stack learning and creation.
 
 ## Project Updates
+<h3>June 15, 2020</h3>
+<h4>7:30pm - 8:00pm</h4>
+Completed both QBs and HBs main pages that display all the players at that position within the database and their data will be displayed. Also, got all the indivdual players pages created and am working on creating different API requests like DELETE, PATCH and PUT for these pages that will manipulate the player document the user is on and requests.<br>Also, will implement a 'Player Creation' which will use the POST method to add a player to the database which will be done from each posistions main page.
+
 <h3>June 14, 2020</h3>
 <h4>2:30pm - 4:30pm</h4>
 Created the hbs page route and static files, completed the GET request that displays the player data to the page and then also created the search bar for this page like the qbs page, allows the user to search by player name.<br>
