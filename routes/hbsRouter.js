@@ -2,26 +2,24 @@ const express = require('express'),
     router = express.Router(),
     HB = require('../models/HB'); // mongoDB collection accessible via variable
 
-// router.use(express.static(process.cwd() + '/public/HBsStatic/'));
+router.get('/', (req, res) => {
 
-// router.get('/', (req, res) => {
+    try {
 
-//     try {
+        res.sendFile(process.cwd() + '/public/HBsStatic/HBs.html');
 
-//         res.sendFile(process.cwd() + '/public/HBsStatic/HBs.html');
+    } catch (err) {
 
-//     } catch (err) {
+        res.status(500).json({
 
-//         res.status(500).json({
+            status: 500,
+            message: err.message
 
-//             status: 500,
-//             message: err.message
+        });
 
-//         });
+    };
 
-//     };
-
-// });
+});
 
 router.get('/all', (req, res) => { // GET all HBs
 
@@ -52,6 +50,25 @@ router.get('/all', (req, res) => { // GET all HBs
 
 router.get('/:id', (req, res) => { // GETs a single HB from the DB
 
+    try {
+
+        res.sendFile(process.cwd() + '/public/hbsStatic/singleHB.html');
+
+    } catch (err) {
+
+        res.status(500).json({
+
+            status: 500,
+            message: err.message
+
+        });
+
+    };
+
+});
+
+router.get('/:id/stats', (req, res) => { // GETs a single QB from the DB
+
     HB.findById(req.params.id)
         .then(hbDoc => {
 
@@ -59,7 +76,7 @@ router.get('/:id', (req, res) => { // GETs a single HB from the DB
 
                 status: 200,
                 message: `Grabbed HB '${hbDoc.name.first} ${hbDoc.name.last}' from Database`,
-                HB_data: hbDoc
+                hb_data: hbDoc
 
             });
 

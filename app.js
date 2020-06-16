@@ -18,8 +18,13 @@ const homeRouter = require('./routes/homeRouter'), // route handling for root ro
     qbsRouter = require('./routes/qbsRouter'), // route handling for quarterbacks route
     hbsRouter = require('./routes/hbsRouter');
 
+app.use('/', express.static('./public/homeStatic'));
 app.use('/', homeRouter); // tells server to run homeRouter middleware when a request is made to the root route
+
+app.use('/qbs', express.static('./public/qbsStatic'));
 app.use('/qbs', qbsRouter);
+
+app.use('/hbs', express.static('./public/hbsStatic'));
 app.use('/hbs', hbsRouter);
 
 app.listen(port, () => { // runs callback on program start; connects to the specified port number

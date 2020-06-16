@@ -2,8 +2,6 @@ const express = require('express'),
     router = express.Router(),
     QB = require('../models/QB'); // mongoDB collection accessible via variable
 
-router.use(express.static(process.cwd() + '/public/qbsStatic/'));
-
 router.get('/', (req, res) => {
 
     try {
@@ -50,7 +48,26 @@ router.get('/all', (req, res) => { // GET all QBs
 
 });
 
-router.get('/:id', (req, res) => { // GETs a single QB from the DB
+router.get('/:id', (req, res) => {
+
+    try {
+
+        res.sendFile(process.cwd() + '/public/qbsStatic/singleQB.html');
+
+    } catch (err) {
+
+        res.status(500).json({
+
+            status: 500,
+            message: err.message
+
+        });
+
+    };
+
+});
+
+router.get('/:id/stats', (req, res) => { // GETs a single QB from the DB
 
     QB.findById(req.params.id)
         .then(qbDoc => {
