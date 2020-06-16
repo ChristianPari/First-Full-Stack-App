@@ -24,7 +24,7 @@ function createHomePage() {
     });
 
     const displayDiv = createDiv({ id: 'displayDiv' }),
-        initialHead = createHeading({ id: 'initialHead', text: 'Click a Position to Display Player Statistics for that Position!' });
+        initialHead = createHeading({ id: 'initialHead', text: 'Click a Position to Display Player Statistics for that Position!', size: 2 });
 
     body.appendChild(homeHead);
     body.appendChild(navBarDiv);
@@ -74,7 +74,8 @@ function createQBs(data) {
             teams = createHeading({ class: 'teams', text: `Current Team: ${player.teams.cur_team}\nPrevious Teams: ${player.teams.prev_teams.join(', ')}` }),
             record = createHeading({ class: 'record', text: `Wins: ${player.record.wins} / Losses: ${player.record.losses}` }),
             yards = createHeading({ class: 'yards', text: `Passing Yards: ${player.passing_yards}` }),
-            tds = createHeading({ class: 'tds', text: `Touchdowns: ${player.touchdowns}` });
+            tds = createHeading({ class: 'tds', text: `Touchdowns: ${player.touchdowns}` }),
+            playerPageLink = createHREF({ class: 'playerPageLink', display: 'View Player Page', ref: `${window.location}qbs/${playerDiv.id}` });
 
         document.getElementById('displayDiv').appendChild(playerDiv);
         playerDiv.appendChild(playerName);
@@ -83,6 +84,7 @@ function createQBs(data) {
         statsDiv.appendChild(record);
         statsDiv.appendChild(yards);
         statsDiv.appendChild(tds);
+        playerDiv.appendChild(playerPageLink);
 
     });
 
@@ -98,7 +100,8 @@ function createHBs(data) {
             teams = createHeading({ class: 'teams', text: `Current Team: ${player.teams.cur_team}\nPrevious Teams: ${player.teams.prev_teams.join(', ')}` }),
             rushingAttempts = createHeading({ class: 'rushingAttempts', text: `Rushing Attempts: ${player.rush_attempts}` }),
             rushingYards = createHeading({ class: 'rushingYards', text: `Rushing Yards: ${player.rushing_yards}` }),
-            tds = createHeading({ class: 'tds', text: `Touchdowns: ${player.touchdowns}` });
+            tds = createHeading({ class: 'tds', text: `Touchdowns: ${player.touchdowns}` }),
+            playerPageLink = createHREF({ class: 'playerPageLink', display: 'View Player Page', ref: `${window.location}hbs/${playerDiv.id}` });
 
         document.getElementById('displayDiv').appendChild(playerDiv);
         playerDiv.appendChild(playerName);
@@ -107,6 +110,7 @@ function createHBs(data) {
         statsDiv.appendChild(rushingAttempts);
         statsDiv.appendChild(rushingYards);
         statsDiv.appendChild(tds);
+        playerDiv.appendChild(playerPageLink);
 
     });
 

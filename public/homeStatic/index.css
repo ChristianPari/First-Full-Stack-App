@@ -1,0 +1,16 @@
+#positionsBar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#positionsBar li {
+    display: inline;
+    padding: 5px;
+    margin: 2px;
+}
+
+#positionsBar li:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
